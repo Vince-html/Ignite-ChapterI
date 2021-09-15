@@ -45,3 +45,48 @@ que acreditaram no meu potencial.
     ```
 
 Fast Refresh no WebPack
+
+- UseEffect
+
+    serve para disparar uma função assim que algo acontece na aplicação
+
+    useEffect  dois parms, a primeira a função que eu quero executar, e a segunda 
+
+    a dependencia. 
+
+    Dependencia vazia ele executa uma unica vez. 
+
+    ```jsx
+    useEffect(() => {}, [repositories])
+    ```
+
+    ⚠️ Cuidado para nao deixar sem o segundo parametro. 
+
+- TypeScript (Tipagem ou Linguagem)
+
+    Vantagens: Escalavel e trabalhos em grupos.
+
+    ```tsx
+    type User = {
+    name: string
+    email: string
+    address: {
+    	state?: string
+    	city: string
+     }
+    }
+
+    function showWelcomeMessage(user) {
+     return `Welcome ${user.name}, your e-mail is ${user.email}. Your city is ${user.city}
+    and your state is ${user.state}`
+    };
+
+    showWelcomeMessage({
+    name: 'fulano',
+    email: 'fulano@fulano.com',
+    address: {
+    	state: 'SC',
+    	city: 'imbituba',
+    	}
+    })
+    ```
