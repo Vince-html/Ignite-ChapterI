@@ -90,3 +90,14 @@ Fast Refresh no WebPack
     	}
     })
     ```
+
+Algumas bibliotecas não incluem as tipagens. 
+
+```tsx
+interface Repository {
+  name: string,
+  description: string,
+  html_url: string,
+}
+const [repositories, setRepositories] = useState<Repository[]>([]);
+```
